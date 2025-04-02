@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     { "src": "*.html", "use": "@vercel/static" },
-    { "src": "public/**/*", "use": "@vercel/static" }
+    { "src": "images/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/images/(.*)", "dest": "/public/images/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/images/(.*)", "dest": "/images/$1" },
+    { "handle": "filesystem" }
   ]
 }
